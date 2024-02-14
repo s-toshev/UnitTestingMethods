@@ -9,23 +9,40 @@ public class StringReverseTests
     public void Test_Reverse_WhenGivenEmptyString_ReturnsEmptyString()
     {
         // Arrange
-
+        StringReverse stringReverse = new StringReverse();
+        string input = "";
         // Act
-        //StringReverse.Reverse(input);
-
+       string actual = StringReverse.Reverse(input);
+        string expected = "";
         // Assert
-        //Assert.AreEqual();
+       Assert.AreEqual(expected,actual);
     }
 
     [Test]
     public void Test_Reverse_WhenGivenSingleCharacterString_ReturnsSameCharacter()
     {
-        // TODO: Write your test here...
+        //Arrange
+
+        StringReverse stringReverse = new StringReverse();
+        string input = "K";
+        //Act
+        string actual = StringReverse.Reverse(input);
+        string expected = "K";
+        //Assert
+        Assert.AreEqual(expected ,actual);
     }
 
     [Test]
     public void Test_Reverse_WhenGivenNormalString_ReturnsReversedString()
     {
-        // TODO: Write your test here...
+        //Arrange
+        StringReverse stringReverse1 = new StringReverse();
+        string input = "naomI";
+        //Act
+        string actual = StringReverse.Reverse(input);
+        string expected = "Imoan";
+        //Assert
+
+        Assert.AreEqual(expected,actual);
     }
 }

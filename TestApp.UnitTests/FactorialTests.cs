@@ -4,15 +4,35 @@ namespace TestApp.UnitTests;
 
 public class FactorialTests
 {
-    [Test]
-    public void Test_CalculateFactorial_InputZero_ReturnsOne()
+    [TestCase(0,1)]
+    public void Test_CalculateFactorial_InputZero_ReturnsOne(int input, int expected)
     {
-        // TODO: Write your test here...
+        //Arrange
+        Factorial factorial = new Factorial();
+
+
+        //Act
+        int actual = Factorial.CalculateFactorial(input);
+
+        //Assert
+        Assert.AreEqual(expected, actual);
     }
 
-    [Test]
-    public void Test_CalculateFactorial_InputPositiveNumber_ReturnsCorrectFactorial()
+    [TestCase(5,120)]
+    [TestCase(1, 1)]
+    public void Test_CalculateFactorial_InputPositiveNumber_ReturnsCorrectFactorial(int input, int expected)
     {
-        // TODO: Write your test here...
+        //Arrange
+        Factorial factorial = new Factorial();
+
+
+        //Act
+
+        int actual = Factorial.CalculateFactorial(input);
+
+
+        //Assert
+
+        Assert.AreEqual(expected, actual);
     }
 }
